@@ -66,7 +66,9 @@ class Project
     end
     
     # Return earliest and lates starting times.
-    @nodes.collect { |i| { es: d[0][i], ls: -d[i][0] } }
+    result = {}
+    @nodes.each { |i| result[i] = { es: d[0][i], ls: -d[i][0] } }
+    result
     
   end
   
