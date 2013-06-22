@@ -4,7 +4,7 @@ require "set"
 INFINITY = 1.0/0
 
 # Edges with cost.
-Edge = Struct.new("Edge", :from, :to, :cost)
+Edge = Struct.new :from, :to, :cost
 
 # Project encapsulation.
 class Project
